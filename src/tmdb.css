@@ -1,0 +1,362 @@
+/* * Item Display */
+.item-display {
+  width: 80%;
+  margin: 0px auto;
+  padding-block: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+.item-display .item-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 20px;
+}
+.item-info div .sec-heading {
+  margin-bottom: 10px;
+}
+.item-info .item-actions {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  width: fit-content;
+}
+.item-actions .item-icon {
+  font-size: 1.3rem;
+  margin-inline: 0 15px;
+  border-radius: 50%;
+  padding: 13px;
+  color: rgb(219, 218, 218);
+  border: 2px solid rgb(219, 218, 218);
+}
+.item-actions .item-icon:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  border: 2px solid blue;
+}
+.item-actions .item-icon:hover .fa-plus,
+.item-actions .item-icon:hover .fa-check{
+  transform: scale(0.9);
+}
+
+.item-display .item-img {
+  width: 60%;
+  box-shadow: 2px 2px 3px 4px rgba(0, 0, 0, 0.178);
+}
+
+
+
+/* * KEYWORDS SEARCH STYILING */
+.keywords-wrapper {
+  width: 95%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+.keywords-wrapper .keywords-mains{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  gap: 50px;
+}
+.keywords-wrapper .keywords-genres {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 10px;
+}
+.keywords-wrapper .my-btn {
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  background: none;
+  border: 1px solid rgba(245, 245, 245, 0.26);
+  width: fit-content;
+  padding: 10px 20px;
+  margin: 0 5px;
+}
+.keywords-wrapper .my-btn.active {
+  background: whitesmoke;
+  color: black;
+  border: none;
+}
+.keywords-wrapper .my-btn.active:hover {
+  border: none;
+  padding: 10px 20px;
+}
+.keywords-wrapper .my-btn:hover {
+ border: 2px solid blue;
+ padding: 9px 19px;
+}
+
+
+/* * HIGHLIGHTS PAGES */
+.highlights-wrapper {
+  width: 95%;
+  margin: 50px auto 0 auto;
+}
+.genres-wrapper {
+  width: 90%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+.genres-wrapper .slider-item {
+  position: relative;
+}
+
+
+/* * PAGINATION */
+.pagination-container {
+  grid-column: 1 / 6;
+  margin: 50px auto;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.pagination-container li {
+  list-style: none;
+  cursor: pointer;
+  padding: 5px;
+  font-size: 1.3rem;
+}
+.pagination-container li:hover {
+  color: white;
+  transform: scale(1.1);
+}
+.pagination-container li.selected {
+  background: whitesmoke;
+  color: black;
+  padding: 5px 10px;
+  border-radius: 50%;
+}
+
+/* * SINGLE MOVIE */
+.single-item {
+  width: 100%;
+  /* position: relative */
+}
+.single-item .item-top-half{
+  width: 100%;
+  height: 800px;
+  position: relative;
+}
+
+.single-item .item-img {
+  position: absolute;
+  top: -105px;
+  width: 100%;
+  height: 800px;
+  mask-image: linear-gradient(transparent 0%,black 20%, transparent 95%);
+}
+.single-item .item-info{
+  position: absolute;
+  bottom: 5%;
+  left: 2%;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.single-item .item-info span{
+ display: flex;
+ align-items: center;
+ gap: 20px;
+}
+.single-item .item-info .fa-plus,
+.single-item .item-info .fa-check{
+  font-size: 1.7rem;
+  width: fit-content;
+  border-radius: 50%;
+  padding: 10px;
+  margin-left: -10px;
+  color: white;
+}
+.single-item .item-info .fa-plus:hover,
+.single-item .item-info .fa-check:hover{
+  background: rgba(197, 195, 195, 0.363);
+  cursor: pointer;
+}
+.single-item .item-info .item-desc {
+  width: 50%;
+}
+
+.single-item .item-bot-half {
+  margin-top: 20px;
+}
+
+.item-bot-half .item-cast {
+  width: 95%;
+  margin: 0 auto;
+  display: flex;
+}
+.item-cast .cast-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 2px;
+}
+.item-cast .cast-group p{
+  margin-left: 10px;
+}
+.cast-group.actors,
+.item-cast-side {
+  width: 100%;
+}
+.item-cast .cast-group h2{
+ grid-column: 1 / 3;
+ margin-block: 40px 10px;
+}
+
+
+/* * SEASONS WRAPPER */
+.seasons-wrapper {
+  width: 95%;
+  margin: 0 auto 100px auto;
+}
+
+.my-btn.seasons-btn {
+  border: none;
+  background-color:#272626;
+  width: 180px;
+  text-align: start;
+  padding-inline: 10px;
+  position: relative;
+  font-weight: 600;
+}
+.my-btn.seasons-btn:hover {
+  border: none;
+  background-color:#272626;
+}
+
+.my-btn.seasons-btn .fa-solid{
+  position: absolute;
+  right: 5%;
+}
+
+.seasons-dropdown {
+  width: 180px;
+  background: #1f1f1f;
+  margin-top: 5px;
+  border-radius: 3px;
+  max-height: 200px;
+  height: fit-content;
+  overflow-y: scroll;
+  position: absolute;
+  z-index: 3;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.281);
+}
+.seasons-dropdown li {
+  list-style: none;
+  font-size: 1.1rem;
+  width: 95%;
+  margin: 5px auto;
+  padding-block: 15px;
+  border-radius: 3px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;  
+}
+.seasons-dropdown li.active {
+  background-color:#646363a1;
+  font-weight: 600;
+}
+.seasons-dropdown li:hover {
+  cursor: pointer;
+  background-color:#3b3b3b81;
+
+}
+.seasons-dropdown li p {
+  margin-left: 15px;
+}
+.seasons-dropdown li .fa-solid {
+  margin-right: 10px;
+}
+
+.episodes-wrapper {
+  margin-block: 20px;
+  display: grid;
+  gap: 10px 10px;
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.episodes-wrapper .episode {
+  margin: 0 auto;
+  width: 90%;
+}
+
+.episode .episode-img {
+  border: 3px solid transparent;
+  width: 100%;
+}
+.episode .episode-img:hover {
+  border: 3px solid blue;
+  cursor: pointer;
+}
+
+.episode .episode-info {
+  width: 100%;
+  color: white;
+}
+.episode .episode-info p {
+  font-weight: 300;
+  font-size: .9rem;
+}
+
+
+/* * SINGLE EPISODE */
+.episodes-link {
+  font-size: 1rem;
+  font-weight: 300;
+}
+.episodes-link i {
+  margin-right: 10px;
+}
+
+/* * TRENDING PAGE */
+
+.trending-wrapper {
+  margin-top: 120px;
+}
+
+.trending-wrapper .keywords-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+
+/* * SEARCH PAGE CSS */
+.search-wrapper {
+  width: 90%;
+  margin: 50px auto;
+}
+.search-input-wrapper {
+  position: relative;
+  margin-bottom: 50px;
+}
+.search-input-wrapper .fa-magnifying-glass,
+.search-input-wrapper .fa-chevron-left {
+  position: absolute;
+  left: 5px;
+  font-size: 1.5rem;
+  color: whitesmoke;
+  top: 20px;
+}
+.my-input.search-input {
+  margin: 0 auto;
+  font-size: 1.5rem;
+  width: 95%;
+  padding-inline: 35px 0;
+  border: none;
+  background: #272626;
+  border-radius: 2px;
+}
+.my-input.search-input::-webkit-outer-spin-button,
+.my-input.search-input::-webkit-inner-spin-button {
+    -webkit-appearance:inherit;
+}
+.my-input.search-input:focus {
+  outline: none;
+}
